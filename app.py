@@ -10,7 +10,7 @@ app.scripts.config.serve_locally = True
 app.config['suppress_callback_exceptions']=True
 
 #Loading Poverty Data
-povertyData = pd.read_csv('1_povertyData.csv', low_memory=False)
+povertyData = pd.read_csv('Datasets/1_povertyData.csv', low_memory=False)
 nvm_p = ['race_eth_code', 'county_fips','geotype', 'geotypevalue', 'geoname','region_name','region_code','TotalPop','NumPov','LL_95CI_percent', 'UL_95CI_percent', 'percent_SE', 'percent_RSE',
        'place_decile', 'CA_RR','ConcentratedCT']
 
@@ -19,7 +19,7 @@ county_options = df_p['county_name'].unique()
 
 
 #Loading Unemployment Data
-unemploymentData = pd.read_csv('4_unemploymentData.csv', low_memory=False)
+unemploymentData = pd.read_csv('Datasets/4_unemploymentData.csv', low_memory=False)
 ump_nvm = ['ind_id', 'ind_definition', 'race_eth_code','geotype', 'geotypevalue', 'geoname','county_fips', 'region_code', 'region_name', 'll_95ci',
        'ul_95ci', 'se', 'rse', 'ca_decile', 'ca_rr', 'version']
 
